@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import jakeImg from "..jakeimg.webp";
+ import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Test Run Next App",
@@ -11,15 +14,14 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className="bg-black text-white">
-
-       
+      <body className="bg-black">
+        <Header title={"This is my header"} logoPath={"jakeImg"} />
 
         {children}
 
-        <footer className=" ">
-          This is my footer
-        </footer>
+        <Footer>
+          This footer, <h2>Banana</h2>
+        </Footer>
       </body>
     </html>
   );
