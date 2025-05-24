@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import jakeImg from "..jakeimg.webp";
+import jakeImg from "@/assets/jakeimg.webp";
  import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 
@@ -15,12 +15,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-black">
-        <Header title={"This is my header"} logoPath={"jakeImg"} />
+        <Header logoPath={jakeImg.src} />
 
         {children}
 
         <Footer>
-          This footer, <h2>Banana</h2>
+          This is a footer using react.reactnode for rendering internals
         </Footer>
       </body>
     </html>
